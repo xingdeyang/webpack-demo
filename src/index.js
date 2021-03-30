@@ -1,4 +1,4 @@
-import myCss from './index.css'
+import myCss from 'main/style/index.less'
 console.log(myCss[0][1])
 // import Vue from 'vue'
 // import App from './App.vue'

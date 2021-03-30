@@ -8,10 +8,16 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, './dist')
   },
+  resolve: {
+    alias: {
+      main: path.resolve(__dirname, './src')
+    },
+    extensions: ['.js', '.vue']
+  },
   module: {
       rules: [{
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"]
+        test: /\.less$/,
+        loader: 'style-loader!css-loader!less-loader'
       }, {
         test: /\.vue$/,
         loader: 'vue-loader'
